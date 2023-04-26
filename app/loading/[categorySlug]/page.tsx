@@ -11,7 +11,7 @@ export default async function Page({
   const res = await fetch(
     // We intentionally delay the reponse to simulate a slow data
     // request that would benefit from `loading.js`
-    `${getBaseUrl()}/api/categories?delay=1000&slug=${params.categorySlug}`,
+    `${getBaseUrl()}/api/categories?delay=2000&slug=${params.categorySlug}`,
     {
       // We intentionally disable Next.js Cache to better demo
       // `loading.js`
