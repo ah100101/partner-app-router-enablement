@@ -1,3 +1,4 @@
+import { getBaseUrl } from '#/lib/getBaseUrl';
 import { RenderingInfo } from '#/ui/rendering-info';
 
 export const dynamicParams = true;
@@ -7,10 +8,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${params.id}`,
-    { next: { revalidate: 10 } },
-  );
+  const res = await fetch(`${getBaseUrl()}/api/posts?id=${params.id}`, {
+    next: { revalidate: 10 },
+  });
   const data = (await res.json()) as { title: string; body: string };
 
   return (
