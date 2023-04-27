@@ -1,4 +1,4 @@
-# Next.js App Router Playground
+# Partner Enablement - Next.js App Router Playground
 
 Next.js recently introduced the App Router (beta) with support for:
 
