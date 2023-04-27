@@ -4,7 +4,7 @@ import { RenderingInfo } from '#/ui/rendering-info';
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return [];
+  return [{ id: '1' }, { id: '2' }, { id: '3' }];
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
